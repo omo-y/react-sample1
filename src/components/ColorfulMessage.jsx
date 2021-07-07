@@ -5,9 +5,9 @@ const ColorfulMessage = (props) => {
   //分割代入
   const { color, size, message } = props;
   const contentStyle = {
-    color: color,
+    color,
     fontSize: size,
-    message: message
+    message
   };
   return <p style={contentStyle}>{message}</p>;
 };
