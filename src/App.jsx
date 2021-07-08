@@ -6,8 +6,12 @@ const App = () => {
     setNum(num + 1);
   };
   const [num, setNum] = useState(0);
+  const [faceShowflag, setFaceShowFlag] = useState(true);
+  const onClickswitchshowflag = () => {
+    setFaceShowFlag(!faceShowflag);
+  };
   const contentLedystyle = {
-    fontSize: "20px",
+    fontSize: "25px",
     color: "pink",
     fontWeight: "bold"
   };
@@ -20,6 +24,9 @@ const App = () => {
       <p style={contentLedystyle}>元気です</p>
       <p>{num}</p>
       <button onClick={onClickCountUp}>カウントアップ</button>
+      <button onClick={onClickswitchshowflag}>ＯＮ／ＯＦＦ</button>
+
+      {faceShowflag && <p>( ^)o(^ )</p>}
     </>
   );
 };
